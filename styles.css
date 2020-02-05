@@ -1,0 +1,28 @@
+#toggle-btn {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #fed201;
+  overflow-x: hidden;
+  transition: 0.2s;
+  box-sizing: border-box;
+  padding-top: 20px;
+  box-shadow: -1px -1px 15px #0000006b;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.showSideNav {
+  width: 250px;
+}
