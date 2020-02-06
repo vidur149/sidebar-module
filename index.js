@@ -98,10 +98,23 @@ let infiniteScrolling = (function () {
     init: function () {
       const toggleLink = document.getElementById('toggle-sidebar');
       const toggleButton = document.getElementById('toggle-btn');
+      const nav = document.createElement('nav');
+      nav.setAttribute('class', 'sidenav');
+      nav.innerHTML = `
+      <div>
+        <div class="sidenav-title">
+          <div>What's new ?</div>
+          <span id="close-sidenav">X</span>
+        </div>
+        <div id="blogs">
+        </div>
+      </div>
+    `;
+      document.body.appendChild(nav);
+
       const closeBtn = document.getElementById('close-sidenav');
-      const sidebar = document.getElementsByClassName('sidenav');
       const blogsContainer = document.getElementById('blogs');
-      intialise(sidebar[0], blogsContainer);
+      intialise(nav, blogsContainer);
       blogsContainer.addEventListener('scroll', fetchBlogs);
       toggleLink.addEventListener('click', toggleSidebar);
       toggleButton.addEventListener('click', toggleSidebar);
